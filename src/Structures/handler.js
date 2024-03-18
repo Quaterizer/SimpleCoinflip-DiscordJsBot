@@ -11,8 +11,7 @@ module.exports = {
     commands.forEach((cmd) => {
       commandArray.push(cmd.data);
     });
-    // to guild
-    await rest.put(Routes.applicationGuildCommands(BOT_ID, GUILD_ID), {
+    await rest.put(Routes.applicationCommands(BOT_ID), {
       body: commandArray,
     });
   },
